@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-# GitHub Pages still runs Jekyll 3.9; adjust the version if you need strict parity.
+# Use the GitHub Pages gem so hosted builds match the Pages infrastructure.
+gem "github-pages", group: :jekyll_plugins
+
 gem "webrick", "~> 1.8"
