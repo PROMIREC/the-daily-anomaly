@@ -1,0 +1,16 @@
+title: The Daily Anomaly
+url: https://news.promireclabs.work
+baseurl: ""
+markdown: kramdown
+theme: null
+plugins: []
+sass: {}
+defaults:
+  - scope:
+      path: "content"
+    values:
+      layout: "story"
+  - scope:
+      path: "editions"
+    values:
+      layout: "edition"

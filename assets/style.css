@@ -1,0 +1,380 @@
+:root {
+  --paper: #f7f1e3;
+  --ink: #2b2118;
+  --accent: #7a4a1a;
+  --rule: #b89b6d66;
+  --badge: #b89b6d22;
+  --badge-text: #4a3012;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+@media (min-width: 64rem) {
+  body {
+    font-size: 1.15rem;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent);
+  border-color: currentColor;
+}
+
+a:focus {
+  outline: 2px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+.masthead {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.masthead__dateline {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+.masthead__title {
+  margin: 0.25rem 0 0;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.masthead__title a {
+  border-bottom: none;
+}
+
+.masthead__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.15rem;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.masthead__rule {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 1rem 0 0;
+}
+
+.content {
+  display: block;
+}
+
+.story {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.story__header {
+  margin-bottom: 1.75rem;
+}
+
+.story__lede {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.story__title {
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+}
+
+.story__badge {
+  margin: 0 0 0.75rem;
+}
+
+.story__meta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  color: rgba(43, 33, 24, 0.75);
+}
+
+.story__separator {
+  color: rgba(43, 33, 24, 0.45);
+}
+
+.story__hero {
+  margin: 1.5rem 0 0;
+}
+
+.story__hero img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  box-shadow: 0 8px 20px -12px rgba(0, 0, 0, 0.4);
+}
+
+.dropcap > p:first-of-type::first-letter {
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  float: left;
+  font-size: 3.5rem;
+  line-height: 0.9;
+  padding-right: 0.2rem;
+  margin-top: 0.2rem;
+  color: var(--accent);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  background: var(--badge);
+  color: var(--badge-text);
+  border: 1px solid rgba(74, 48, 18, 0.2);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badge--inline {
+  padding-inline: 0.35rem;
+}
+
+.evidence--high {
+  background: rgba(79, 126, 79, 0.2);
+  border-color: rgba(79, 126, 79, 0.4);
+}
+
+.evidence--medium {
+  background: rgba(178, 137, 74, 0.2);
+  border-color: rgba(178, 137, 74, 0.4);
+}
+
+.evidence--low {
+  background: rgba(147, 76, 76, 0.2);
+  border-color: rgba(147, 76, 76, 0.4);
+}
+
+.story__sources {
+  margin-top: 2rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+}
+
+.story__sources h2 {
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.story__sources ul {
+  list-style: square;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.story__sources li + li {
+  margin-top: 0.35rem;
+}
+
+.edition__title {
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin: 0;
+}
+
+.edition__dateline {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(43, 33, 24, 0.7);
+}
+
+.edition__entries ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.edition__entries li {
+  margin-bottom: 0.65rem;
+}
+
+.edition__entries a {
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 48rem) {
+  .edition__entries ul {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+  .edition__entries li {
+    break-inside: avoid;
+  }
+}
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: rgba(43, 33, 24, 0.7);
+}
+
+.site-footer__links {
+  margin: 0.25rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.site-footer__links a {
+  border-bottom: none;
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .page {
+    max-width: none;
+    padding: 1in;
+  }
+  .masthead,
+  .site-footer,
+  .site-nav {
+    display: none !important;
+  }
+  a {
+    border: none;
+  }
+}
+
+.edition-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.edition-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.75rem 1rem;
+  background: rgba(184, 155, 109, 0.12);
+  border: 1px solid var(--rule);
+}
+
+@media (min-width: 40rem) {
+  .edition-list li {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.edition-list__date {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: rgba(43, 33, 24, 0.7);
+}
+
+.home-intro {
+  text-align: center;
+  padding: 2rem 1rem 2.5rem;
+  border: 1px solid var(--rule);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px -25px rgba(0, 0, 0, 0.5);
+}
+
+.home-kicker {
+  margin: 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: rgba(43, 33, 24, 0.6);
+}
+
+.home-headline {
+  margin: 0.75rem 0 1rem;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+}
+
+.home-subhead {
+  margin: 0 0 1rem;
+}
+
+.home-cta .badge {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.home-archive {
+  margin-top: 3rem;
+}
+
+.home-archive h2 {
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.home-archive__link {
+  margin-top: 1rem;
+}
+
+.evidence--unverified {
+  background: rgba(107, 96, 79, 0.2);
+  border-color: rgba(107, 96, 79, 0.4);
+}

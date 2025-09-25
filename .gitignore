@@ -1,0 +1,8 @@
+# Bundler and build artifacts
+/vendor/
+/vendor/bundle/
+/.bundle/
+/_site/
+
+# macOS
+.DS_Store

@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/origins-of-life-decoded-researchers-unravel-ho
 image: 
 ---
 
-<span class="badge">Evidence: Medium</span>
 
 **Claims**
 - Researchers devised theoretical early Earth conditions under which RNA and amino acids could combine to form the origin of life.

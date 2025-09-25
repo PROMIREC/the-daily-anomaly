@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/the-hidden-force-of-avalanches-physics-breakth
 image: 
 ---
 
-<span class="badge">Evidence: High</span>
 
 **Claims**
 - Novel X-ray technology allowed researchers to closely observe snow and soil motion and reveal intricate swirls and loops affecting particle movement.

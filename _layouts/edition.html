@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign edition_name = page.title | default: page.date | default: page.name %}
+<article class="edition" itemscope itemtype="https://schema.org/CollectionPage">
+  <header class="edition__header">
+    <h1 class="edition__title">Edition of {{ edition_name }}</h1>
+    {% if page.date %}<p class="edition__dateline">Published {{ page.date | date: "%B %-d, %Y" }}</p>{% endif %}
+  </header>
+  <div class="edition__body">
+    <div class="edition__entries">
+      {{ content }}
+    </div>
+  </div>
+</article>

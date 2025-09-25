@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/watching-it-perform-at-that-limit-is-exhilarat
 image: 
 ---
 
-<span class="badge">Evidence: High</span>
 
 **Claims**
 - The Inouye Solar Telescope captured the clearest H-alpha image of a solar flare to date.

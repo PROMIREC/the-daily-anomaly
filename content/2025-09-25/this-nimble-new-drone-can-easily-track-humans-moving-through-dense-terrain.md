@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/this-nimble-new-drone-can-easily-track-humans-
 image: 
 ---
 
-<span class="badge">Evidence: Medium</span>
 
 **Claims**
 - SUPER demonstrated following a person jogging through a forest and avoided thin obstacles while moving at 20 meters per second or more.

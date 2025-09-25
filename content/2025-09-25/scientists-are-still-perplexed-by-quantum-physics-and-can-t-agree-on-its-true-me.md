@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/scientists-are-still-perplexed-by-quantum-phys
 image: 
 ---
 
-<span class="badge">Evidence: Medium</span>
 
 **Claims**
 - Nature conducted the largest-ever survey of quantum physicists and found a persistent lack of consensus on the theory's interpretation.

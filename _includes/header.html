@@ -1,0 +1,15 @@
+<header class="masthead" role="banner">
+  <div class="masthead__inner">
+    <div class="masthead__identity">
+      <p class="masthead__dateline">{{ site.time | date: "%A, %B %-d, %Y" }}</p>
+      <h1 class="masthead__title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    </div>
+    {% assign editions_active = page.url and page.url contains '/editions/' %}
+    {% assign home_active = page.url == '/' or page.url == '/index.html' %}
+    <nav class="site-nav" aria-label="Primary">
+      <a href="{{ site.baseurl }}/"{% if home_active %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ site.baseurl }}/editions/"{% if editions_active %} aria-current="page"{% endif %}>Editions</a>
+    </nav>
+  </div>
+  <hr class="masthead__rule" />
+</header>

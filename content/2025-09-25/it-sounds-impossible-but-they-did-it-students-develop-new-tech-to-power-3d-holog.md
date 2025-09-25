@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/it-sounds-impossible-but-they-did-it-students-
 image: 
 ---
 
-<span class="badge">Evidence: Medium</span>
 
 **Claims**
 - Students developed Quantum Multi-Wavelength Holography using IR illumination and visible-light entanglement to capture phase and intensity for true 3D holograms.

@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/u-s-space-forces-enigmatic-x37-b-space-plane-t
 image: 
 ---
 
-<span class="badge">Evidence: Medium</span>
 
 **Claims**
 - X-37B OTV-8 was scheduled to launch Aug. 21, 2025 aboard a SpaceX Falcon 9 from Kennedy Space Center.

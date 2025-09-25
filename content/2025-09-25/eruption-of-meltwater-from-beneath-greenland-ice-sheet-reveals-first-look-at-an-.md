@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/eruption-of-meltwater-from-beneath-greenland-i
 image: 
 ---
 
-<span class="badge">Evidence: High</span>
 
 **Claims**
 - A previously unseen subglacial flood erupted to the surface, cracking the Greenland ice sheet.

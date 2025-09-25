@@ -9,7 +9,6 @@ sources: ["https://thedebrief.org/we-are-actually-very-close-to-this-science-fic
 image: 
 ---
 
-<span class="badge">Evidence: Medium</span>
 
 **Claims**
 - Meta-optical systems enabled new interactions with light and could miniaturize optics, potentially reducing mobile-phone camera lens size.

@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{% assign evidence_level = page.evidence_level | default: 'Unverified' %}
+{% assign evidence_level_class = evidence_level | downcase | replace: ' ', '-' %}
+<article class="story" itemscope itemtype="https://schema.org/Article">
+  <header class="story__header">
+    {% if page.edition %}<p class="story__lede">Edition {{ page.edition }}</p>{% endif %}
+    <h1 class="story__title" itemprop="headline">{{ page.title }}</h1>
+    {% if page.evidence_level %}
+    <p class="story__badge"><span class="badge evidence evidence--{{ evidence_level_class }}">Evidence: {{ evidence_level }}</span></p>
+    {% endif %}
+    <p class="story__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.category %}<span aria-hidden="true" class="story__separator">•</span><span class="story__category" itemprop="articleSection">{{ page.category }}</span>{% endif %}
+      {% if page.evidence_level %}<span aria-hidden="true" class="story__separator">•</span><span>Evidence: <span class="badge badge--inline evidence evidence--{{ evidence_level_class }}">{{ evidence_level }}</span></span>{% endif %}
+    </p>
+    {% if page.image %}
+      {% assign hero_image = page.image %}
+      {% unless hero_image contains '://' %}
+        {% assign hero_image = site.baseurl | append: hero_image %}
+      {% endunless %}
+      <figure class="story__hero">
+        <img src="{{ hero_image }}" alt="{{ page.image_alt | default: page.title }}" loading="lazy" itemprop="image" />
+      </figure>
+    {% endif %}
+  </header>
+  <div class="story__body dropcap" itemprop="articleBody">
+    {{ content }}
+  </div>
+  {% assign sources = page.sources %}
+  {% if sources == nil and page.source %}
+    {% assign sources = page.source | split: '||' %}
+  {% endif %}
+  {% if sources %}
+  <section class="story__sources" aria-labelledby="sources-title">
+    <h2 id="sources-title">Sources</h2>
+    <ul>
+      {% for source in sources %}
+        {% assign source_clean = source | strip %}
+        {% if source_clean != '' %}
+          {% assign source_url = source_clean %}
+          {% unless source_url contains '://' %}
+            {% assign source_url = site.baseurl | append: source_url %}
+          {% endunless %}
+          <li><a href="{{ source_url }}">{{ source_clean }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</article>
