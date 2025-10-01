@@ -1,6 +1,7 @@
 title: The Daily Anomaly
 url: https://news.promireclabs.work
 baseurl: ""
+permalink: pretty
 markdown: kramdown
 theme: null
 plugins: []
