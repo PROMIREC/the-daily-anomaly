@@ -1,11 +1,26 @@
 ---
 layout: default
 ---
-<header class="mast" role="banner" aria-label="Masthead">
-  <div class="name">THE DAILY ANOMALY</div>
-  <div class="date">{{ page.edition | default: page.title }}</div>
-</header>
-<hr class="rule" />
-<section class="grid" role="list" aria-label="Edition articles">
-  {{ content }}
-</section>
+{% assign edition_source = page.edition | default: page.date | default: page.title %}
+{% assign edition_date = edition_source | date: "%B %-d, %Y" %}
+{% assign edition_weekday = edition_source | date: "%A" %}
+{% assign edition_issue = edition_source | date: "%j" %}
+<div class="front-page" role="document" aria-label="Edition front page">
+  <header class="mast" role="banner" aria-label="Masthead">
+    <div class="mast__strip mast__strip--top">
+      <span class="mast__meta">{{ site.paper_est | default: 'Est. 2023' }}</span>
+      <span class="mast__meta mast__meta--center">{{ edition_weekday }}, {{ edition_date }}</span>
+      <span class="mast__meta">{{ site.paper_price | default: 'Price: Five Cents' }}</span>
+    </div>
+    <div class="mast__name">THE DAILY ANOMALIST</div>
+    <div class="mast__strip mast__strip--bottom">
+      <span class="mast__meta">{{ site.paper_city | default: 'Promirec City, Earth' }}</span>
+      <span class="mast__meta mast__meta--center">Issue No. {{ edition_issue }}</span>
+      <span class="mast__meta">{{ site.paper_motto | default: 'Edge Science &amp; High Strangeness' }}</span>
+    </div>
+  </header>
+  <hr class="rule rule--heavy" />
+  <section class="front-grid" role="list" aria-label="Edition articles">
+    {{ content }}
+  </section>
+</div>
