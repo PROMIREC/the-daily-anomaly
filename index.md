@@ -14,7 +14,7 @@ layout: default
   {% assign latest_date = latest_slug | date: "%B %-d, %Y" %}
   <section class="home-intro">
     <p class="home-kicker">Edge Science &amp; High Strangeness</p>
-    <h1 class="home-headline">Today’s Edition — {{ latest_date }}</h1>
+    <h1 class="home-headline">Today’s Edition</h1>
     <p class="home-subhead">Evidence-graded anomalies, fringe tech, and curious signals gathered daily.</p>
     <p class="home-cta"><a class="badge" href="{{ site.baseurl }}{{ latest_url }}">Read the full edition →</a></p>
   </section>
