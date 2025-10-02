@@ -10,7 +10,7 @@ layout: default
   | sort: "path" | reverse %}
 
 {% if editions.size > 0 %}
-- 👉 [Read the latest edition]({{ editions.first.url | relative_url }})
+- [Read the latest edition]({{ editions.first.url | relative_url }})
 
 {% if editions.size > 1 %}
 ## Previous Editions
