@@ -31,7 +31,9 @@
   </head>
   <body class="layout-{{ page.layout | default: 'default' }}">
     <div class="page">
-      {% include header.html %}
+      {% unless page.layout == 'edition' %}
+        {% include header.html %}
+      {% endunless %}
       <main id="content" class="container content" role="main">
         {{ content }}
       </main>

@@ -4,7 +4,16 @@ layout: default
 {% assign edition_source = page.edition | default: page.date | default: page.title %}
 {% assign edition_date = edition_source | date: "%B %-d, %Y" %}
 {% assign edition_weekday = edition_source | date: "%A" %}
-{% assign edition_issue = edition_source | date: "%j" %}
+{% assign edition_issue = 0 %}
+{% assign all_editions = site.pages | where: "layout", "edition" | sort: "path" %}
+{% for edition_page in all_editions %}
+  {% if edition_page.url == page.url %}
+    {% assign edition_issue = forloop.index %}
+  {% endif %}
+{% endfor %}
+{% if edition_issue == 0 %}
+  {% assign edition_issue = 1 %}
+{% endif %}
 <div class="front-page" role="document" aria-label="Edition front page">
   <header class="mast" role="banner" aria-label="Masthead">
     <div class="mast__strip mast__strip--top">
