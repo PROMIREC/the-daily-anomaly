@@ -6,6 +6,7 @@ markdown: kramdown
 theme: null
 plugins: []
 sass: {}
+repository: PROMIREC/the-daily-anomaly
 defaults:
   - scope:
       path: "content"
