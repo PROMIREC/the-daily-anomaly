@@ -15,3 +15,7 @@ defaults:
       path: "editions"
     values:
       layout: "edition"
+exclude:
+  - content/2025-09-25
+  - vendor
+  - editions/2025-09-25.md
