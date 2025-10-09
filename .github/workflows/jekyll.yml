@@ -65,6 +65,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  concurrency:
-  group: pages-${{ github.ref }}
-  cancel-in-progress: true
